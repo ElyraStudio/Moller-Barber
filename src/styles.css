@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/* Removido o import do tw-animate-css para evitar erro ENOENT */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-blood: var(--blood);
+  --color-graphite: var(--graphite);
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.14 0.005 260);
+  --foreground: oklch(0.97 0.005 90);
+  --card: oklch(0.18 0.006 260);
+  --card-foreground: oklch(0.97 0.005 90);
+  --popover: oklch(0.18 0.006 260);
+  --popover-foreground: oklch(0.97 0.005 90);
+  --primary: oklch(0.78 0.13 85);
+  --primary-foreground: oklch(0.14 0.005 260);
+  --secondary: oklch(0.22 0.006 260);
+  --secondary-foreground: oklch(0.97 0.005 90);
+  --muted: oklch(0.22 0.006 260);
+  --muted-foreground: oklch(0.65 0.01 90);
+  --accent: oklch(0.78 0.13 85);
+  --accent-foreground: oklch(0.14 0.005 260);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.97 0.005 90);
+  --border: oklch(0.28 0.008 260);
+  --input: oklch(0.25 0.008 260);
+  --ring: oklch(0.78 0.13 85);
+  --gold: oklch(0.78 0.13 85);
+  --gold-foreground: oklch(0.14 0.005 260);
+  --blood: oklch(0.5 0.2 25);
+  --graphite: oklch(0.22 0.006 260);
+  --gradient-gold: linear-gradient(135deg, oklch(0.85 0.14 85), oklch(0.7 0.13 70));
+  --gradient-dark: linear-gradient(180deg, oklch(0.14 0.005 260), oklch(0.1 0.005 260));
+  --shadow-gold: 0 10px 40px -10px oklch(0.78 0.13 85 / 0.4);
+  --shadow-elegant: 0 20px 60px -20px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  @keyframes photo-entrance {
+    from { opacity: 0; transform: scale(0.9) translateY(30px); filter: blur(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes reveal-text {
+    from { clip-path: inset(0 0 100% 0); transform: translateY(20px); opacity: 0; }
+    to { clip-path: inset(0 0 0 0); transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slow-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes energy-flow {
+    0% { transform: translateX(-100%) skewX(-15deg); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateX(200%) skewX(-15deg); opacity: 0; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+  }
+
+  @keyframes energy-worm {
+    0% { stroke-dashoffset: 1000; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+  }
+
+  @keyframes radar-pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  @keyframes border-beam {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+  }
+
+  @keyframes text-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  /* Classes de Animação */
+  .animate-photo-in { animation: photo-entrance 1.2s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .animate-float { animation: float-slow 4s ease-in-out infinite; }
+  .animate-reveal { animation: reveal-text 1.2s cubic-bezier(0.77, 0, 0.175, 1) both; }
+  .animate-slow-zoom { animation: slow-zoom 20s infinite alternate ease-in-out; }
+  .animate-fade-up { animation: fade-up 0.8s ease-out both; }
+  .animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
+  .animate-infinite-scroll { animation: infinite-scroll 40s linear infinite; }
+  .animate-energy { animation: energy-flow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+  .animate-glow-loop { animation: glow-pulse 3s ease-in-out infinite; }
+  .animate-worm { stroke-dasharray: 200; animation: energy-worm 4s linear infinite; }
+  .animate-radar { animation: radar-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  
+  .animate-text-shimmer {
+    background: linear-gradient(90deg, #555 25%, #fff 50%, #555 75%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 3s linear infinite;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-300 { animation-delay: 300ms; }
+
+  /* Utilitários de Border Beam */
+  .border-beam-container {
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+
+  .border-beam-light {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .border-beam-light::before {
+    content: "";
+    position: absolute;
+    aspect-ratio: 1;
+    width: 200px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    offset-path: rect(0 auto auto 0 round 2px);
+    animation: border-beam 4s linear infinite;
+  }
+}
