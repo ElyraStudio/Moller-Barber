@@ -38,7 +38,7 @@ export function About() {
             </div>
 
             <p className="text-muted-foreground text-lg font-light leading-relaxed">
-              Esqueça o conceito gourmet. André Moller foca na técnica bruta do **degradê de alta performance** e no acabamento técnico. Atendimento prático na Vila Branca para quem busca precisão sem perda de tempo.
+              Esqueça o conceito gourmet. André Moller foca na técnica bruta do degradê de alta performance e no acabamento técnico. Atendimento prático na Vila Branca para quem busca precisão sem perda de tempo.
             </p>
 
             {/* Cards de Especialidade com Border-Glow no Hover */}

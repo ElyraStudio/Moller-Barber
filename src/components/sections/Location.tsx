@@ -60,7 +60,7 @@ export function Location() {
               </h2>
               
               <p className="text-zinc-500 text-lg max-w-sm font-light leading-relaxed border-l border-gold/50 pl-6">
-                A excelência de André Moller agora em um ponto estratégico da Vila Branca.
+                 André Moller agora em um ponto estratégico da Vila Branca.
               </p>
             </div>
 

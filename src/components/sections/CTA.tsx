@@ -44,7 +44,7 @@ export function CTA() {
             className="text-4xl sm:text-5xl lg:text-8xl font-display text-white tracking-tighter leading-[0.9]"
           >
             DOMINE SUA <br />
-            <span className="text-gradient-gold italic">PRESENÇA.</span>
+            <span className="text-gradient-gold italic">ESTÉTICA.</span>
           </motion.h2>
           
           <motion.p 
@@ -53,7 +53,7 @@ export function CTA() {
             transition={{ delay: 0.3 }}
             className="text-zinc-500 text-base lg:text-lg font-light max-w-[280px] sm:max-w-md mx-auto"
           >
-            A estética de elite que você busca, no coração de Gravataí.
+            O cabelo de elite que você busca, no coração de Gravataí.
           </motion.p>
         </div>
 
