@@ -1,5 +1,3 @@
-Aqui está um modelo de README.md profissional para o projeto da Elyra, focado no site da Barbearia do André Moller em Gravataí. Ele destaca as tecnologias que usamos e o cuidado com a performance mobile.
-
 💈 Elyra — André Moller Barbearia
 Este projeto é um site High-End desenvolvido para o barbeiro André Moller, localizado na Vila Branca, Gravataí/RS. O foco da plataforma é proporcionar uma experiência visual de elite, com alta performance em dispositivos móveis e foco total em conversão de agendamentos via WhatsApp.
 
